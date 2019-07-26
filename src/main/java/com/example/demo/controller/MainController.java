@@ -1,5 +1,7 @@
 package com.example.demo.controller;
+import com.example.demo.Project_data;
 import com.example.demo.User;
+import com.example.demo.repository.Project_dataRepository;
 import com.example.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +14,7 @@ import java.util.List;
 @RequestMapping("/")
 public class MainController {
     @Autowired private UserRepository userRepository;
+    @Autowired private Project_dataRepository project_dataRepository;
 
     @RequestMapping
     public @ResponseBody String index(){
@@ -22,5 +25,11 @@ public class MainController {
     public @ResponseBody List<User> getUserList(){
         return userRepository.findAll();
     }
-    
+    @RequestMapping("/project")
+    public @ResponseBody List<Project_data> getProject_datalist(){
+        return project_dataRepository.findAll();
+    }
+
+
+
 }
