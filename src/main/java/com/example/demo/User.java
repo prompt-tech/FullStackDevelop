@@ -3,10 +3,10 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class User implements Serializable{
+public class User implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name="name", nullable=false)
@@ -15,27 +15,27 @@ public class User implements Serializable{
     @Column(name="age", nullable=false)
     private Integer age;
 
-    public Long GetId(){
+    public Long GetId() {
         return id;
     }
 
-    public void setId(Long id){
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public Integer getAge(){
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(Integer age){
+    public void setAge(Integer age) {
         this.age = age;
     }
 
