@@ -16,6 +16,10 @@ Users
 
 Returns all users.
 
+**Response**
+
+JSON
+
 **URI**
 
 /users
